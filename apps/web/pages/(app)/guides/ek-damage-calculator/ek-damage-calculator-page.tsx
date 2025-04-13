@@ -116,17 +116,22 @@ export function EkDamageCalculatorPage() {
   baseDamage *= fateweaverMultiplier
 
   const skillDamages = {
-    smash: baseDamage * 9,
-    charge: baseDamage * 2.64,
-    windmill: baseDamage * 5,
-    bash: baseDamage * 6,
-    assaultSlash: baseDamage * 3.5,
+    smash: baseDamage * skillMultipliers.smash,
+    charge: baseDamage * skillMultipliers.charge,
+    windmill: baseDamage * skillMultipliers.windmill,
+    bash: baseDamage * skillMultipliers.bash,
+    assaultSlash: baseDamage * skillMultipliers.assaultSlash,
   }
 
   const arcanaSkillDamages = {
-    dynavoltSmash: baseDamage * 40.8 + skillDamages.smash,
-    shatteringWindmill: baseDamage * 21.7 + skillDamages.windmill,
-    blazingAssaultSmash: baseDamage * 18 + skillDamages.assaultSlash,
+    dynavoltSmash:
+      baseDamage * arcanaSkillMultipliers.dynavoltSmash + skillDamages.smash,
+    shatteringWindmill:
+      baseDamage * arcanaSkillMultipliers.shatteringWindmill +
+      skillDamages.windmill,
+    blazingAssaultSmash:
+      baseDamage * arcanaSkillMultipliers.blazingAssaultSmash +
+      skillDamages.assaultSlash,
   }
 
   const baseId = useId()
