@@ -96,9 +96,7 @@ export function SpecialUpgradePage() {
     const chartData = Array.from({ length: attempts }, (_, i) => ({
       attemptNumber: i + 1,
       alban: albanDistArray[i + 1][5] * 100,
-      albanLabel: `${albanDistArray[i + 1][5] * 100}%`,
       regular: regularDistArray[i + 1][5] * 100,
-      regularLabel: `${regularDistArray[i + 1][5] * 100}%`,
     }))
 
     return {
@@ -189,7 +187,7 @@ export function SpecialUpgradePage() {
         matrix since protective upgrade stones are typically used.
       </div>
 
-      <div className="flex">
+      <div className="flex flex-col gap-4 lg:flex-row">
         <div className="flex-1 space-y-2">
           <div className="text-xl font-bold">
             Transition Matrix (using Standard Anvil)
@@ -208,17 +206,24 @@ export function SpecialUpgradePage() {
         config={{
           regular: {
             label: 'Regular',
+            formatValue(value) {
+              return formatPercent(value / 100)
+            },
           },
           alban: {
             label: 'Alban',
+            formatValue(value) {
+              return formatPercent(value / 100)
+            },
           },
         }}
+        className="max-h-[500px] w-full"
       >
         <LineChart data={data.chartData}>
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name" />
           <YAxis />
-          <Tooltip content={<ChartTooltipContent />} />
+          <Tooltip content={<ChartTooltipContent label="Success" />} />
           <Legend />
           <Line type="monotone" dataKey="regular" stroke="#82ca9d" />
           <Line type="monotone" dataKey="alban" stroke="#8884d8" />
@@ -238,3 +243,8 @@ function multiplyVectorByMatrix(dist: number[], matrix: number[][]): number[] {
   }
   return result
 }
+
+const formatPercent = new Intl.NumberFormat('en-US', {
+  style: 'percent',
+  maximumFractionDigits: 1,
+}).format

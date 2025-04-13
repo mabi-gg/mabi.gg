@@ -3,6 +3,7 @@
   "type": "module",
   "scripts": {
     "dev": "vike dev",
+    "dev-proxy": "cross-env DEV_PROXY=true vike dev",
     "build": "vike build",
     "preview": "NODE_ENV=production wrangler pages dev --port 5173"
   },
@@ -10,6 +11,7 @@
     "@cloudflare/workers-types": "^4.20250321.0",
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
+    "cross-env": "^7.0.3",
     "vike": "^0.4.227",
     "vike-cloudflare": "^0.2.2",
     "vike-react": "^0.6.1",
