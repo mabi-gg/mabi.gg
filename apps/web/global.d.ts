@@ -5,6 +5,8 @@ declare global {
     interface PageContext {
       trpcClient: AppRouterClient
       colorScheme: 'light' | 'dark' | null
+      CF_PAGES_BRANCH: string | null
+      CF_PAGES_COMMIT_SHA: string | null
     }
   }
 }

@@ -1,16 +1,16 @@
-import { createCallerClient, createFetchHandler } from '@mabigg/trpc/server'
-import render from 'render2'
-import { getCookie } from 'hono/cookie'
-import { Context, Hono } from 'hono'
-import { apply } from 'vike-cloudflare/hono'
-import type { D1Database, R2Bucket } from '@cloudflare/workers-types'
-import { serve } from 'vike-cloudflare/hono/serve'
 import { Auth, type AuthConfig } from '@auth/core'
+import type { D1Database, R2Bucket } from '@cloudflare/workers-types'
 import { appSchema, type AppDatabase } from '@mabigg/db'
+import { createCallerClient, createFetchHandler } from '@mabigg/trpc/server'
 import { drizzle as drizzleD1 } from 'drizzle-orm/d1'
-import { getAuthConfig } from '../auth/auth-config'
-import { getCsrfToken, getProviders, getSession } from '../auth/auth-actions'
+import { Context, Hono } from 'hono'
+import { getCookie } from 'hono/cookie'
 import React from 'react'
+import render from 'render2'
+import { apply } from 'vike-cloudflare/hono'
+import { serve } from 'vike-cloudflare/hono/serve'
+import { getCsrfToken, getProviders, getSession } from '../auth/auth-actions'
+import { getAuthConfig } from '../auth/auth-config'
 
 type AppEnv = {
   Bindings: {
@@ -106,6 +106,13 @@ function startServer() {
     return trpcHandler(ctx.req.raw)
   })
 
+  app.get('/deployment/info', (ctx) => {
+    return ctx.json({
+      CF_PAGES_BRANCH: import.meta.env.CF_PAGES_BRANCH ?? null,
+      CF_PAGES_COMMIT_SHA: import.meta.env.CF_PAGES_COMMIT_SHA ?? null,
+    })
+  })
+
   apply(app, {
     async pageContext(ctx) {
       const theme = getCookie(ctx.hono, 'theme')
@@ -114,6 +121,8 @@ function startServer() {
         trpcClient,
         colorScheme:
           theme === 'dark' ? 'dark' : theme === 'light' ? 'light' : null,
+        CF_PAGES_BRANCH: import.meta.env.CF_PAGES_BRANCH ?? null,
+        CF_PAGES_COMMIT_SHA: import.meta.env.CF_PAGES_COMMIT_SHA ?? null,
       } satisfies Vike.PageContext
     },
   })
