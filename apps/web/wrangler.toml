@@ -1,0 +1,17 @@
+name = "mabigg"
+compatibility_date = "2024-09-29"
+pages_build_output_dir = "./dist/cloudflare"
+compatibility_flags = [ "nodejs_compat" ]
+
+
+# https://developers.cloudflare.com/d1/build-with-d1/local-development/#develop-locally-with-pages
+[[d1_databases]]
+binding = "DB" # Should match preview_database_id
+database_name = "mabigg"
+database_id = "a52c64df-76ff-4394-b4b5-ca9c0fdd1ce5" # wrangler d1 info YOUR_DATABASE_NAME
+preview_database_id = "DB" # Required for Pages local development
+migrations_dir = "../../packages/db/src/migrations"
+
+[[r2_buckets]]
+binding = "R2"
+bucket_name = "mabigg"

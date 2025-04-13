@@ -1,0 +1,394 @@
+[
+  {
+    "requiresCommerceRank": "Seasonal Commerce Rank Silver 5 or Higher",
+    "location": "Beach of Scathach",
+    "goods": [
+      {
+        "name": "Ocean Tear",
+        "description": "A formation of coral and pearl that evokes the beauty of the ocean.",
+        "weight": 7,
+        "minValue": 711,
+        "maxValue": 2128,
+        "weeklyLimit": 100,
+        "maxQtyPerSlot": 15,
+        "items": [
+          { "itemId": 64073, "name": "Decorative Seafood", "quantity": 1 }
+        ]
+      },
+      {
+        "name": "Allure Stem",
+        "description": "A tough, smooth stem. Most flora taken from the Forest of Temptation crumbles quickly, so rare samples like this are highly sought after.",
+        "weight": 15,
+        "minValue": 1589,
+        "maxValue": 4809,
+        "weeklyLimit": 100,
+        "maxQtyPerSlot": 10,
+        "items": [{ "itemId": 64074, "name": "Tough Lumber", "quantity": 1 }]
+      },
+      {
+        "name": "Abyss Crystal",
+        "description": "You feel like you might get sucked into the blackness of this crystal. Infusing it with mana can create many colorful effects, making this a valuable decorative piece.",
+        "weight": 5,
+        "minValue": 1094,
+        "maxValue": 3331,
+        "weeklyLimit": 100,
+        "maxQtyPerSlot": 15,
+        "items": [{ "itemId": 64075, "name": "Black Crystal", "quantity": 1 }]
+      },
+      {
+        "name": "Sage Crystal",
+        "description": "A bottle of colorless crystals. These can be used to enhance the quality of other alchemy crystals, regardless of attributes or effects.",
+        "weight": 10,
+        "minValue": 2186,
+        "maxValue": 6440,
+        "weeklyLimit": 100,
+        "maxQtyPerSlot": 15,
+        "items": [{ "itemId": 64069, "name": "White Crystal", "quantity": 1 }]
+      },
+      {
+        "name": "River's Source",
+        "description": "A blue, viscous liquid. Adding this to potions will give them a little extra kick.",
+        "weight": 25,
+        "minValue": 2839,
+        "maxValue": 8544,
+        "weeklyLimit": 100,
+        "maxQtyPerSlot": 10,
+        "items": [{ "itemId": 64077, "name": "Sticky Sap", "quantity": 1 }]
+      },
+      {
+        "name": "Night Sky Leather",
+        "description": "Leather that shines in the dark. Looking into this is like looking into the night sky. Used in high quality outfits.",
+        "weight": 4,
+        "minValue": 3407,
+        "maxValue": 10799,
+        "weeklyLimit": 100,
+        "maxQtyPerSlot": 30,
+        "items": [{ "itemId": 64078, "name": "Shiny Leather", "quantity": 1 }]
+      },
+      {
+        "name": "Unidentified Fish",
+        "description": "Unidentifiable fish from the deep seas. Highly valued among collectors.",
+        "weight": 5,
+        "minValue": 2153,
+        "maxValue": 6615,
+        "weeklyLimit": 100,
+        "maxQtyPerSlot": 20,
+        "items": [{ "itemId": 64079, "name": "Deep-sea Fish", "quantity": 1 }]
+      },
+      {
+        "name": "Crystal Blade",
+        "description": "A long, thin, cracked blade made out of crystal. Used as a decoration, not a weapon; the longer, the better.",
+        "weight": 15,
+        "minValue": 7225,
+        "maxValue": 22193,
+        "weeklyLimit": 100,
+        "maxQtyPerSlot": 10,
+        "items": [{ "itemId": 64080, "name": "Crystal Column", "quantity": 1 }]
+      }
+    ]
+  },
+  {
+    "requiresCommerceRank": "Seasonal Commerce Rank Silver 5 or Higher",
+    "location": "Karu Forest",
+    "goods": [
+      {
+        "name": "Wooden Table",
+        "description": "A table made with the wood of a huge tree. Enjoy its beautiful grain and uniquely pleasant aroma.",
+        "weight": 15,
+        "minValue": 3410,
+        "maxValue": 4343,
+        "weeklyLimit": 25,
+        "maxQtyPerSlot": 10,
+        "items": [
+          { "itemId": 50664, "name": "Shrimp Taming Bait", "quantity": 4 },
+          { "itemId": 67201, "name": "Shyllien", "quantity": 2 }
+        ]
+      },
+      {
+        "name": "Wooden Craft",
+        "description": "A figurine fashioned in the likeness of one found in the Rano region's ruins. Though not of any inherently great value, they're popular as souvenirs for those visiting the region.",
+        "weight": 15,
+        "minValue": 5802,
+        "maxValue": 7206,
+        "weeklyLimit": 15,
+        "maxQtyPerSlot": 7,
+        "items": [
+          { "itemId": 5100003, "name": "Magic Parchment", "quantity": 1 },
+          { "itemId": 60051, "name": "Tough String", "quantity": 2 }
+        ]
+      },
+      {
+        "name": "Stone Horse Statue",
+        "description": "A statue designed to accurately depict the dynamic appearance of the Stone Horse. Rumor has it that it'll be used to promote a jousting tournament.",
+        "weight": 20,
+        "minValue": 11590,
+        "maxValue": 13949,
+        "weeklyLimit": 10,
+        "maxQtyPerSlot": 7,
+        "items": [
+          { "itemId": 67110, "name": "Hillwen Alloy", "quantity": 2 },
+          { "itemId": 50022, "name": "Wheat Flour", "quantity": 5 }
+        ]
+      },
+      {
+        "name": "Karu Shiitake Mushroom",
+        "description": "A special variety of shiitake mushroom that grows only in the Karu Forest. It is said to be more delicious and nutritious than normal shiitake mushrooms.",
+        "weight": 25,
+        "minValue": 22059,
+        "maxValue": 30932,
+        "weeklyLimit": 8,
+        "maxQtyPerSlot": 7,
+        "items": [
+          { "itemId": 67111, "name": "Spin Gear", "quantity": 1 },
+          { "itemId": 63219, "name": "Average Firewood", "quantity": 5 },
+          { "itemId": 60013, "name": "Fine Silk", "quantity": 2 }
+        ]
+      },
+      {
+        "name": "Shellfish Fossil",
+        "description": "A shellfish fossil found in the Muyu Desert area. It speaks to the memories of the distant past, when the Muyu Desert was an inland sea.",
+        "weight": 30,
+        "minValue": 111300,
+        "maxValue": 179656,
+        "weeklyLimit": 3,
+        "maxQtyPerSlot": 5,
+        "items": [
+          { "itemId": 67114, "name": "Energy Amplifier", "quantity": 2 },
+          { "itemId": 5100058, "name": "Sturdy Loop", "quantity": 1 },
+          { "itemId": 5100002, "name": "Magic Quill Pen", "quantity": 5 }
+        ]
+      }
+    ]
+  },
+  {
+    "requiresCommerceRank": "Seasonal Commerce Rank Silver 5 or Higher",
+    "location": "Oasis",
+    "goods": [
+      {
+        "name": "Fine Sand",
+        "description": "Sand collected from the Rupes Desert area, of a very fine and silky grain. It has many uses.",
+        "weight": 15,
+        "minValue": 2644,
+        "maxValue": 3771,
+        "weeklyLimit": 25,
+        "maxQtyPerSlot": 10,
+        "items": [
+          { "itemId": 51172, "name": "Stamina 500 Potion", "quantity": 3 },
+          { "itemId": 60004, "name": "Braid", "quantity": 2 }
+        ]
+      },
+      {
+        "name": "Prison Ghost Wings",
+        "description": "The wings of one of the Prison Ghosts that appear in the Metus region. Often used for decoration due to their sleek appearance.",
+        "weight": 15,
+        "minValue": 4742,
+        "maxValue": 6069,
+        "weeklyLimit": 15,
+        "maxQtyPerSlot": 7,
+        "items": [
+          { "itemId": 64303, "name": "Cotton Cushion Stuffing", "quantity": 1 },
+          { "itemId": 60014, "name": "Finest Silk", "quantity": 2 }
+        ]
+      },
+      {
+        "name": "Oasis Painting",
+        "description": "A framed painting of the beautiful scenery of an oasis. There seems to be ongoing demand for these artworks thanks to the exotic locale they depict.",
+        "weight": 20,
+        "minValue": 9990,
+        "maxValue": 12545,
+        "weeklyLimit": 10,
+        "maxQtyPerSlot": 7,
+        "items": [
+          { "itemId": 60030, "name": "Finest Leather Strap", "quantity": 1 },
+          { "itemId": 60050, "name": "Tough Thread", "quantity": 3 }
+        ]
+      },
+      {
+        "name": "Cactus Flower",
+        "description": "Cactus flowers that will bloom for a long time without withering, even without special care. The petals can be dried and steeped to make a tea with a deep, rich fragrance.",
+        "weight": 25,
+        "minValue": 24064,
+        "maxValue": 30001,
+        "weeklyLimit": 8,
+        "maxQtyPerSlot": 7,
+        "items": [
+          { "itemId": 51033, "name": "Spirit Liqueur", "quantity": 1 },
+          { "itemId": 64027, "name": "Silver Plate", "quantity": 2 },
+          { "itemId": 60021, "name": "Fine Fabric", "quantity": 4 }
+        ]
+      },
+      {
+        "name": "Giant Canine Fossil",
+        "description": "The fossilized canine of a huge unknown animal. Some suggest it could be a dragon's tooth, but no one can really confirm it.",
+        "weight": 30,
+        "minValue": 98671,
+        "maxValue": 133402,
+        "weeklyLimit": 3,
+        "maxQtyPerSlot": 5,
+        "items": [
+          { "itemId": 77420, "name": "Pet Playset", "quantity": 1 },
+          { "itemId": 64309, "name": "Hay Bale", "quantity": 3 },
+          { "itemId": 67208, "name": "Enchanted Firewood", "quantity": 5 }
+        ]
+      }
+    ]
+  },
+  {
+    "requiresCommerceRank": "Seasonal Commerce Rank Silver 5 or Higher",
+    "location": "Calida",
+    "goods": [
+      {
+        "name": "Elvan Egg",
+        "description": "Perhaps the most popular food among those bathing in hot springs. Hot springs and elvan eggs go together like chocolate and mint.",
+        "weight": 15,
+        "minValue": 3313,
+        "maxValue": 4229,
+        "weeklyLimit": 25,
+        "maxQtyPerSlot": 10,
+        "items": [
+          { "itemId": 51171, "name": "MP 500 Potion", "quantity": 1 },
+          { "itemId": 63220, "name": "Fine Firewood", "quantity": 2 }
+        ]
+      },
+      {
+        "name": "Calida Salmon",
+        "description": "Whether raw, smoked, or grilled, Calida salmon is delicious no matter how you eat it.",
+        "weight": 15,
+        "minValue": 5631,
+        "maxValue": 7152,
+        "weeklyLimit": 15,
+        "maxQtyPerSlot": 7,
+        "items": [
+          { "itemId": 67108, "name": "Energy Converter", "quantity": 1 },
+          { "itemId": 67205, "name": "Purified Rabbit Foot", "quantity": 1 }
+        ]
+      },
+      {
+        "name": "Hot Spring Bath Bomb",
+        "description": "A bath bomb that creates rich foam reputed to keep your skin smooth and light. Surprisingly, its all-natural ingredients mean the bathwater is safe for the environment.",
+        "weight": 20,
+        "minValue": 12872,
+        "maxValue": 15858,
+        "weeklyLimit": 10,
+        "maxQtyPerSlot": 7,
+        "items": [
+          { "itemId": 67206, "name": "Sundew", "quantity": 3 },
+          {
+            "itemId": 90603,
+            "name": "Finest Vanilla Scented Candle",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "name": "Large Camping Tent",
+        "description": "A camping tent known for its great durability and reliability. With this helpful shelter, you can camp comfortably anywhere in Erinn.",
+        "weight": 25,
+        "minValue": 26084,
+        "maxValue": 33533,
+        "weeklyLimit": 8,
+        "maxQtyPerSlot": 7,
+        "items": [
+          { "itemId": 64305, "name": "Artificial Turf", "quantity": 1 },
+          { "itemId": 67107, "name": "Emerald Fuse", "quantity": 1 },
+          { "itemId": 60029, "name": "Fine Leather Strap", "quantity": 5 }
+        ]
+      },
+      {
+        "name": "Pink Salt",
+        "description": "Salt produced in small quantities with strict quality control. It has almost no bitterness, and its mild, savory taste lingers in your mouth.",
+        "weight": 30,
+        "minValue": 107892,
+        "maxValue": 149675,
+        "weeklyLimit": 3,
+        "maxQtyPerSlot": 5,
+        "items": [
+          { "itemId": 64301, "name": "Large Mythril Nail", "quantity": 3 },
+          {
+            "itemId": 45021,
+            "name": "Poison Tip Wyvern Ballista Bolt",
+            "quantity": 3
+          },
+          { "itemId": 63221, "name": "Finest Firewood", "quantity": 3 }
+        ]
+      }
+    ]
+  },
+  {
+    "requiresCommerceRank": "Seasonal Commerce Rank Silver 5 or Higher",
+    "location": "Pera",
+    "goods": [
+      {
+        "name": "Volcanic Mud Pack",
+        "description": "A mud pack made of fine soil from a volcanic region. Spread this paint-like on your face to rejuvenate your skin and liven up your complexion.",
+        "weight": 15,
+        "minValue": 3473,
+        "maxValue": 4047,
+        "weeklyLimit": 25,
+        "maxQtyPerSlot": 10,
+        "items": [
+          { "itemId": 64026, "name": "Copper Plate", "quantity": 2 },
+          { "itemId": 67207, "name": "Mysterious Herb Powder", "quantity": 3 }
+        ]
+      },
+      {
+        "name": "Magma Stone",
+        "description": "A magma stone hardened while imbued with mana, remaining warm for a very long time. When all the mana it holds is exhausted, it becomes no different from a normal stone.",
+        "weight": 15,
+        "minValue": 7712,
+        "maxValue": 8947,
+        "weeklyLimit": 15,
+        "maxQtyPerSlot": 7,
+        "items": [
+          { "itemId": 64029, "name": "Mythril Plate", "quantity": 2 },
+          { "itemId": 50023, "name": "Barley Flour", "quantity": 3 }
+        ]
+      },
+      {
+        "name": "Ixion Horn",
+        "description": "The horn of an Ixion, a rare creature encountered in volcanic regions. It is often used as a material for expensive crafts because of its beautiful shape and the ease of working with it.",
+        "weight": 20,
+        "minValue": 13940,
+        "maxValue": 16402,
+        "weeklyLimit": 10,
+        "maxQtyPerSlot": 7,
+        "items": [
+          { "itemId": 51205, "name": "Marionette 500 Potion", "quantity": 3 },
+          { "itemId": 64028, "name": "Gold Plate", "quantity": 5 }
+        ]
+      },
+      {
+        "name": "Volcano Lizard Egg",
+        "description": "It is said that Volcano Lizards can be tamed if you hatch their eggs and raise them by hand. Few, however, seem to have put in the effort to try it themselves.",
+        "weight": 25,
+        "minValue": 27687,
+        "maxValue": 39858,
+        "weeklyLimit": 8,
+        "maxQtyPerSlot": 7,
+        "items": [
+          { "itemId": 64051, "name": "Glittering Paper", "quantity": 5 },
+          { "itemId": 60022, "name": "Finest Fabric", "quantity": 5 },
+          { "itemId": 51170, "name": "HP 500 Potion", "quantity": 2 }
+        ]
+      },
+      {
+        "name": "Raspa Black Leopard Leather",
+        "description": "The leather of Black Leopards, which occasionally appear in volcanic regions, is highly valued due to the big cats' relative rarity.",
+        "weight": 30,
+        "minValue": 119257,
+        "maxValue": 156916,
+        "weeklyLimit": 3,
+        "maxQtyPerSlot": 5,
+        "items": [
+          { "itemId": 67213, "name": "Mutant", "quantity": 1 },
+          {
+            "itemId": 64155,
+            "name": "Harmonious Cosmos Perfume",
+            "quantity": 2
+          },
+          { "itemId": 63348, "name": "Special Firewood", "quantity": 3 }
+        ]
+      }
+    ]
+  }
+]

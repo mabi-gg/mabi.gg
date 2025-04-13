@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "declaration": false,
+    "declarationMap": false,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "strict": true,
+    "module": "Preserve",
+    "moduleResolution": "bundler",
+    "target": "ESNext"
+  }
+}

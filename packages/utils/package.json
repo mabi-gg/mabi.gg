@@ -1,0 +1,11 @@
+{
+  "name": "@mabigg/utils",
+  "type": "module",
+  "private": true,
+  "sideEffects": false,
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
