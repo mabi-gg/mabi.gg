@@ -12,6 +12,7 @@ export type ChartConfig = {
   [k in string]: {
     label?: React.ReactNode
     icon?: React.ComponentType
+    formatValue?: (value: any) => string
   } & (
     | { color?: string; theme?: never }
     | { color?: never; theme: Record<keyof typeof THEMES, string> }
@@ -153,7 +154,7 @@ function ChartTooltipContent({
       return null
     }
 
-    return <div className={cn('font-medium', labelClassName)}>{value}</div>
+    return <div className={cn('font-medium', labelClassName)}>{value}s</div>
   }, [
     label,
     labelFormatter,
@@ -234,7 +235,8 @@ function ChartTooltipContent({
                     </div>
                     {item.value && (
                       <span className="text-foreground font-mono font-medium tabular-nums">
-                        {item.value.toLocaleString()}
+                        {itemConfig?.formatValue?.(item.value) ??
+                          item.value.toLocaleString()}
                       </span>
                     )}
                   </div>
@@ -345,9 +347,9 @@ function getPayloadConfigFromPayload(
 
 export {
   ChartContainer,
-  ChartTooltip,
-  ChartTooltipContent,
   ChartLegend,
   ChartLegendContent,
   ChartStyle,
+  ChartTooltip,
+  ChartTooltipContent,
 }
