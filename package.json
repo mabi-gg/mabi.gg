@@ -2,7 +2,8 @@
   "name": "mabigg",
   "type": "module",
   "scripts": {
-    "dev": "pnpm -r dev"
+    "dev": "pnpm -r dev",
+    "dev-proxy": "pnpm -r dev"
   },
   "packageManager": "pnpm@10.4.1",
   "devDependencies": {
