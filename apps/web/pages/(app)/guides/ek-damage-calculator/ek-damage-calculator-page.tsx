@@ -1,7 +1,7 @@
 import { Checkbox } from '@mabigg/ui/components/checkbox'
 import { Input } from '@mabigg/ui/components/input'
 import { Label } from '@mabigg/ui/components/label'
-import { useId, useReducer } from 'react'
+import { Fragment, useId, useReducer } from 'react'
 
 interface CharacterStats {
   minDamage: number
@@ -17,6 +17,34 @@ interface Buffs {
   magicPotion: boolean
   fateweaver: boolean
 }
+
+const skillMultipliers = {
+  smash: 9,
+  charge: 2.64,
+  windmill: 5,
+  bash: 6,
+  assaultSlash: 3.5,
+}
+
+const arcanaSkillMultipliers = {
+  dynavoltSmash: 40.8,
+  shatteringWindmill: 21.7,
+  blazingAssaultSmash: 18,
+}
+
+const SKILL_LABELS = {
+  smash: 'Smash',
+  charge: 'Charge',
+  windmill: 'Windmill',
+  bash: 'Bash',
+  assaultSlash: 'Assault Slash',
+  dynavoltSmash: 'Dynavolt Smash',
+  shatteringWindmill: 'Shattering Windmill',
+  blazingAssaultSmash: 'Blazing Assault Smash',
+} as const satisfies Record<
+  keyof typeof skillMultipliers | keyof typeof arcanaSkillMultipliers,
+  string
+>
 
 const CHARACTER_STAT_LABELS = {
   minDamage: 'Min Damage',
@@ -183,18 +211,35 @@ export function EkDamageCalculatorPage() {
           <div className="text-xl font-bold">Results</div>
           <div>
             <div className="font-bold">Base Damage</div>
-            <div className="font-bold">{baseDamage}</div>
+            <div className="font-bold">{formatNumber(baseDamage)}</div>
           </div>
           <div className="grid grid-cols-3 gap-4">
             {Object.entries({
               ...skillDamages,
               ...arcanaSkillDamages,
-            }).map(([key, value]) => {
+            }).map(([key, value], idx) => {
               return (
-                <div key={key} className="flex flex-col">
-                  <div className="">{key}</div>
-                  <div className="font-bold">{formatDamage(value)}</div>
-                </div>
+                <Fragment key={idx}>
+                  <div className="flex flex-col">
+                    <div className="">
+                      {SKILL_LABELS[key as keyof typeof SKILL_LABELS]}
+                    </div>
+                    <div className="font-bold">{formatDamage(value)}</div>
+                    <div className="text-sm">
+                      crits{' '}
+                      <span className="font-bold">
+                        {formatDamage(
+                          value * characterStats.criticalDamageMultiplier
+                        )}
+                      </span>
+                    </div>
+                  </div>
+                  {idx === Object.keys(skillDamages).length - 1 && (
+                    <div className="col-span-full">
+                      <hr />
+                    </div>
+                  )}
+                </Fragment>
               )
             })}
           </div>
@@ -203,9 +248,9 @@ export function EkDamageCalculatorPage() {
       <pre>
         {JSON.stringify(
           {
-            powerPotionMultiplier,
-            bfoMultiplier,
-            fateweaverMultiplier,
+            powerPotionMultiplier: formatNumber(powerPotionMultiplier),
+            bfoMultiplier: formatNumber(bfoMultiplier),
+            fateweaverMultiplier: formatNumber(fateweaverMultiplier),
           },
           null,
           2
@@ -221,5 +266,12 @@ const formatDamage = new Intl.NumberFormat('en-US', {
   minimumFractionDigits: 0,
   notation: 'compact',
   compactDisplay: 'short',
+  style: 'decimal',
+}).format
+
+const formatNumber = new Intl.NumberFormat('en-US', {
+  maximumFractionDigits: 2,
+  minimumFractionDigits: 0,
+  notation: 'standard',
   style: 'decimal',
 }).format
